@@ -1,23 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import ActionComponent from './components/ActionComponent';
+import configureStore from './store';
 import './App.css';
 
-function App() {
+const store = configureStore();
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>React App</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <ActionComponent />
+    </Provider>
   );
-}
+};
 
 export default App;
