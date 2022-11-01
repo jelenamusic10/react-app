@@ -3,7 +3,7 @@ import logo from '../assets/logo.svg';
 import { connect } from 'react-redux';
 import '../App.css';
 
-const ActionComponent = () => {
+const MainComponent = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -14,4 +14,4 @@ const ActionComponent = () => {
   );
 };
 
-export default connect(null)(ActionComponent);
+export default connect(null)(MainComponent);
